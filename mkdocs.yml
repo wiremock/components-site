@@ -4,6 +4,9 @@ theme:
   name: readthedocs
   highlightjs: true
 
+extra_css:
+  - css/wiremock.css
+
 plugins:
   - search
   - multirepo:
