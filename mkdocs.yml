@@ -20,13 +20,41 @@ plugins:
         - name: state
           import_url: 'https://github.com/wiremock/wiremock-extension-state?branch=develop&edit_uri=/blob/develop/'
           imports: [ /README.md, docs/*  ]
-        - name: webhooks
+        - name: wiremock
           import_url: https://github.com/wiremock/wiremock.org?branch=main&edit_uri=/blob/main/&multi_docs=True&docs_dir=_docs/*
-          imports: [ webhooks-and-callbacks.md ]
+          imports: [ webhooks-and-callbacks.md, response-templating.md ]
+
+          
+        # Outside WireMock GitHub org
+        - name: 9cookies
+          import_url: 'https://github.com/9cookies/wiremock-extensions?branch=master&edit_uri=/blob/master/'
+          imports: [ /*.md ]
+        - name: cors
+          import_url: 'https://github.com/RichieLoco/WiremockCorsExtension?branch=master&edit_uri=/blob/master/'
+          imports: [ /README.md ]
+        - name: stub-mapping-tracker
+          import_url: 'https://github.com/MasonM/wiremock-stub-mapping-tracker?branch=master&edit_uri=/blob/master/'
+          imports: [ /README.md ]
+        - name: record-delay
+          import_url: 'https://github.com/anuragashok/wiremock-extension-record-delay?branch=main&edit_uri=/blob/main/'
+          imports: [ /README.md ]
 
 nav:
   - Extensions:
     - GraphQL: graphql/README.md
     - gRPC: grpc/README.md
+    - Response Template Transformer: wiremock/_docs/response-templating.md
     - State: state/README.md
-    - Webhooks: webhooks/_docs/webhooks-and-callbacks.md
+    - Webhooks: wiremock/_docs/webhooks-and-callbacks.md
+
+    # Outside WireMock GitHub org
+    - CORS protection: cors/README.md
+    - JSON Body Transformer: 9cookies/json-body-transformer.md
+    - Request Time Matcher: 9cookies/request-time-matcher.md
+    
+  - Developer Extensions:
+    - Callback Simulator: 9cookies/callback-simulator.md
+    - Keywords: 9cookies/keywords.md
+    - Stub Mapping Tracker: stub-mapping-tracker/README.md
+    - Record Delay Capture: record-delay/README.md
+
