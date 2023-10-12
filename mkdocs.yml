@@ -1,4 +1,5 @@
 site_name: WireMock Components
+site_dir: _site
 theme:
   name: readthedocs
   highlightjs: true
