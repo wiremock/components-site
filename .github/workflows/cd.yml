@@ -27,6 +27,9 @@ jobs:
         with:
           version: 1.5.1
 
+      - name: Install dependencies
+        run: pip install mkdocs-multirepo-plugin
+
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
         # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
@@ -34,6 +37,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           #CUSTOM_DOMAIN: optionaldomain.com
           CONFIG_FILE: mkdocs.yml
-          EXTRA_PACKAGES: mkdocs-multirepo-plugin
           # GITHUB_DOMAIN: github.myenterprise.com
           #REQUIREMENTS: folder/requirements.txt
