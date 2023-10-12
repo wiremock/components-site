@@ -30,6 +30,10 @@
     color: var(--wm-blue);
 }
 
+.md-typeset h1 {
+    color: var(--wm-blue); 
+}
+
 h2 {
     color: var(--wm-blue); 
 }

@@ -1,7 +1,7 @@
 site_name: WireMock Components
 site_dir: _site
 theme:
-  name: readthedocs
+  name: material
   highlightjs: true
 
 extra_css:
