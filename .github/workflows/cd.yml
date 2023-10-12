@@ -17,18 +17,18 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.10"
-      
-      - name: Install and configure Poetry
-        uses: snok/install-poetry@v1
-        with:
-          version: 1.5.1
-
-      - name: Install dependencies
-        run: pip install mkdocs-multirepo-plugin
+ #     - name: Set up Python
+ #       uses: actions/setup-python@v4
+ #       with:
+ #         python-version: "3.10"
+ #     
+ #     - name: Install and configure Poetry
+ #       uses: snok/install-poetry@v1
+ #       with:
+ #         version: 1.5.1
+ #
+ #      - name: Install dependencies
+ #       run: pip install mkdocs-multirepo-plugin
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
@@ -38,4 +38,4 @@ jobs:
           #CUSTOM_DOMAIN: optionaldomain.com
           CONFIG_FILE: mkdocs.yml
           # GITHUB_DOMAIN: github.myenterprise.com
-          #REQUIREMENTS: folder/requirements.txt
+          REQUIREMENTS: requirements.txt
