@@ -1,0 +1,31 @@
+site_name: WireMock Components
+theme:
+  name: readthedocs
+  highlightjs: true
+
+plugins:
+  - search
+  - multirepo:
+      # TODO: Change to True once works
+      cleanup: false
+      keep_docs_dir: false
+      nav_repos:
+        - name: graphql
+          import_url: 'https://github.com/wiremock/wiremock-graphql-extension?branch=main&edit_uri=/blob/main/'
+          imports: [ /README.md, docs/* ]
+        - name: grpc
+          import_url: 'https://github.com/wiremock/wiremock-grpc-extension?branch=main&edit_uri=/blob/main/'
+          imports: [ /README.md, docs/* ]
+        - name: state
+          import_url: 'https://github.com/wiremock/wiremock-extension-state?branch=develop&edit_uri=/blob/develop/'
+          imports: [ /README.md, docs/*  ]
+        - name: webhooks
+          import_url: https://github.com/wiremock/wiremock.org?branch=main&edit_uri=/blob/main/&multi_docs=True&docs_dir=_docs/*
+          imports: [ webhooks-and-callbacks.md ]
+
+nav:
+  - Extensions:
+    - GraphQL: graphql/README.md
+    - gRPC: grpc/README.md
+    - State: state/README.md
+    - Webhooks: webhooks/_docs/webhooks-and-callbacks.md
