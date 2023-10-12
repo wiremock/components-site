@@ -29,15 +29,22 @@ plugins:
         - name: 9cookies
           import_url: 'https://github.com/9cookies/wiremock-extensions?branch=master&edit_uri=/blob/master/'
           imports: [ /*.md ]
+        - name: jwt
+          import_url: 'https://github.com/MasonM/wiremock-jwt-extension?branch=master&edit_uri=/blob/master/'
+          imports: [ /README.md ]
         - name: cors
           import_url: 'https://github.com/RichieLoco/WiremockCorsExtension?branch=master&edit_uri=/blob/master/'
           imports: [ /README.md ]
         - name: stub-mapping-tracker
           import_url: 'https://github.com/MasonM/wiremock-stub-mapping-tracker?branch=master&edit_uri=/blob/master/'
           imports: [ /README.md ]
+        - name: prometheus
+          import_url: 'https://github.com/mikeskali/wiremock-metrics?branch=master&edit_uri=/blob/master/'
+          imports: [ /README.md ]
         - name: record-delay
           import_url: 'https://github.com/anuragashok/wiremock-extension-record-delay?branch=main&edit_uri=/blob/main/'
           imports: [ /README.md ]
+          
 
 nav:
   - Extensions:
@@ -49,12 +56,15 @@ nav:
 
     # Outside WireMock GitHub org
     - CORS protection: cors/README.md
+    - JSON Web Tokens (JWT): jwt/README.md
     - JSON Body Transformer: 9cookies/json-body-transformer.md
     - Request Time Matcher: 9cookies/request-time-matcher.md
     
+  - Operations Extensions:
+    - Prometheus Metrics: prometheus/README.md
+
   - Developer Extensions:
     - Callback Simulator: 9cookies/callback-simulator.md
     - Keywords: 9cookies/keywords.md
     - Stub Mapping Tracker: stub-mapping-tracker/README.md
     - Record Delay Capture: record-delay/README.md
-
