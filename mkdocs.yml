@@ -1,11 +1,69 @@
 site_name: WireMock Components
-site_dir: _site
-theme:
-  name: readthedocs
-  highlightjs: true
+site_description: >-
+  Provides listing of WireMock extensions, tools and other components.
+  The site embeds documentation from other repositories.
+copyright: Copyright &copy; 2023 - WireMock Contributors
 
+# Build
+site_dir: _site
+
+theme:
+  name: material
+  highlightjs: true
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    # NOT compatible qith toc.integrate
+    # - navigation.indexes
+    - navigation.path
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.expand
+    #- navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+  font:
+    text: DM Sans
+    code: Roboto Mono
+  favicon: assets/images/favicon.svg
+  logo: assets/images/logo.svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/slack
+      link: https://slack.wiremock.org/
+      name: WireMock Community Slack
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/wiremockorg
+      name: WireMock on Twitter
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/wiremock/
+      name: WireMock on LinkedIn
+    - icon: fontawesome/brands/mastodon
+      link: https://fosstodon.org/@wiremock
+      name: WireMock on Fosstodon
+  
+    
 extra_css:
-  - css/wiremock.css
+  - assets/css/wiremock.css
 
 plugins:
   - search
@@ -25,7 +83,7 @@ plugins:
           imports: [ /README.md, docs/*  ]
         - name: wiremock
           import_url: https://github.com/wiremock/wiremock.org?branch=main&edit_uri=/blob/main/&multi_docs=True&docs_dir=_docs/*
-          imports: [ webhooks-and-callbacks.md, response-templating.md ]
+          imports: [ webhooks-and-callbacks.md, response-templating.md, extending-wiremock.md ]
 
           
         # Outside WireMock GitHub org
@@ -47,12 +105,20 @@ plugins:
         - name: record-delay
           import_url: 'https://github.com/anuragashok/wiremock-extension-record-delay?branch=main&edit_uri=/blob/main/'
           imports: [ /README.md ]
-          
+        
+        # System
+        - name: community
+          import_url: 'https://github.com/wiremock/community?branch=main&edit_uri=/blob/main/'
+          imports: [ contributing/* ]
+        - name: dotgithub
+          import_url: 'https://github.com/wiremock/.github?branch=main&edit_uri=/blob/main/'
+          imports: [ CONTRIBUTING.md, SECURITY.md, CODE_OF_CONDUCT.md ]
+        
 
 nav:
   - Extensions:
-    - GraphQL: graphql/README.md
     - gRPC: grpc/README.md
+    - GraphQL: graphql/README.md
     - Response Template Transformer: wiremock/_docs/response-templating.md
     - State: state/README.md
     - Webhooks: wiremock/_docs/webhooks-and-callbacks.md
@@ -71,3 +137,14 @@ nav:
     - Keywords: 9cookies/keywords.md
     - Stub Mapping Tracker: stub-mapping-tracker/README.md
     - Record Delay Capture: record-delay/README.md
+
+  - General:
+      Security: dotgithub/SECURITY.md
+
+  - Contributing:
+    - Contributor Guide: community/contributing/README.md 
+    - Hacktoberfest 2023: dotgithub/CONTRIBUTING.md
+    - Creating Extensions: wiremock/_docs/extending-wiremock.md
+    - Code of Conduct: dotgithub/CODE_OF_CONDUCT.md
+
+  
