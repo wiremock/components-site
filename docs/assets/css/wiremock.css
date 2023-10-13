@@ -26,7 +26,7 @@
     background-color: var(--wm-blue);
 }
 
-.wy-menu-vertical header, .wy-menu-vertical p.caption {
+.md-nav__item--section>.md-nav__link[for] {
     color: var(--wm-blue);
 }
 
