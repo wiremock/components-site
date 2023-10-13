@@ -15,20 +15,24 @@ theme:
     # - header.autohide
     # - navigation.expand
     - navigation.footer
-    - navigation.indexes
+    # NOT compatible qith toc.integrate
+    # - navigation.indexes
+    - navigation.path
     # - navigation.instant
     # - navigation.instant.prefetch
     # - navigation.instant.progress
     # - navigation.prune
-    # - navigation.sections
+    - navigation.sections
+    - navigation.expand
     #- navigation.tabs
     # - navigation.tabs.sticky
-    # - navigation.top
+    - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
     - toc.follow
+    - toc.integrate
   font:
     text: DM Sans
     code: Roboto Mono
@@ -83,8 +87,8 @@ plugins:
 
 nav:
   - Extensions:
-    - GraphQL: graphql/README.md
     - gRPC: grpc/README.md
+    - GraphQL: graphql/README.md
     - Response Template Transformer: wiremock/_docs/response-templating.md
     - State: state/README.md
     - Webhooks: wiremock/_docs/webhooks-and-callbacks.md
