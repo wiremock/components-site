@@ -38,7 +38,7 @@ theme:
     code: Roboto Mono
   favicon: assets/images/favicon.svg
   logo: assets/images/logo.svg
-
+ 
 extra_css:
   - assets/css/wiremock.css
 
@@ -89,7 +89,7 @@ plugins:
           imports: [ contributing/* ]
         - name: dotgithub
           import_url: 'https://github.com/wiremock/.github?branch=main&edit_uri=/blob/main/'
-          imports: [ CONTRIBUTING.md, SECURITY.md ]
+          imports: [ CONTRIBUTING.md, SECURITY.md, CODE_OF_CONDUCT.md ]
         
 
 nav:
@@ -122,5 +122,6 @@ nav:
     - Contributor Guide: community/contributing/README.md 
     - Hacktoberfest 2023: dotgithub/CONTRIBUTING.md
     - Creating Extensions: wiremock/_docs/extending-wiremock.md
+    - Code of Conduct: dotgithub/CODE_OF_CONDUCT.md
 
   
