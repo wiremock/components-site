@@ -60,7 +60,7 @@ plugins:
           imports: [ /README.md, docs/*  ]
         - name: wiremock
           import_url: https://github.com/wiremock/wiremock.org?branch=main&edit_uri=/blob/main/&multi_docs=True&docs_dir=_docs/*
-          imports: [ webhooks-and-callbacks.md, response-templating.md ]
+          imports: [ webhooks-and-callbacks.md, response-templating.md, extending-wiremock.md ]
 
           
         # Outside WireMock GitHub org
@@ -82,7 +82,15 @@ plugins:
         - name: record-delay
           import_url: 'https://github.com/anuragashok/wiremock-extension-record-delay?branch=main&edit_uri=/blob/main/'
           imports: [ /README.md ]
-          
+        
+        # System
+        - name: community
+          import_url: 'https://github.com/wiremock/community?branch=main&edit_uri=/blob/main/'
+          imports: [ contributing/* ]
+        - name: dotgithub
+          import_url: 'https://github.com/wiremock/.github?branch=main&edit_uri=/blob/main/'
+          imports: [ CONTRIBUTING.md, SECURITY.md ]
+        
 
 nav:
   - Extensions:
@@ -106,3 +114,13 @@ nav:
     - Keywords: 9cookies/keywords.md
     - Stub Mapping Tracker: stub-mapping-tracker/README.md
     - Record Delay Capture: record-delay/README.md
+
+  - General:
+      Security: dotgithub/SECURITY.md
+
+  - Contributing:
+    - Contributor Guide: community/contributing/README.md 
+    - Hacktoberfest 2023: dotgithub/CONTRIBUTING.md
+    - Creating Extensions: wiremock/_docs/extending-wiremock.md
+
+  
