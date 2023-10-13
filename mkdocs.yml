@@ -36,9 +36,8 @@ theme:
   font:
     text: DM Sans
     code: Roboto Mono
-  favicon: assets/images/favicon.png
-  icon:
-    logo: logo
+  favicon: assets/images/favicon.svg
+  logo: assets/images/logo.svg
 
 extra_css:
   - assets/css/wiremock.css
