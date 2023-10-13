@@ -1,5 +1,12 @@
 site_name: WireMock Components
+site_description: >-
+  Provides listing of WireMock extensions, tools and other components.
+  The site embeds documentation from other repositories.
+copyright: Copyright &copy; 2023 - WireMock Contributors
+
+# Build
 site_dir: _site
+
 theme:
   name: material
   highlightjs: true
@@ -38,7 +45,23 @@ theme:
     code: Roboto Mono
   favicon: assets/images/favicon.svg
   logo: assets/images/logo.svg
- 
+
+extra:
+  social:
+    - icon: fontawesome/brands/slack
+      link: https://slack.wiremock.org/
+      name: WireMock Community Slack
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/wiremockorg
+      name: WireMock on Twitter
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/wiremock/
+      name: WireMock on LinkedIn
+    - icon: fontawesome/brands/mastodon
+      link: https://fosstodon.org/@wiremock
+      name: WireMock on Fosstodon
+  
+    
 extra_css:
   - assets/css/wiremock.css
 
